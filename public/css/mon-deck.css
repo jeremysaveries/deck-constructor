@@ -1,0 +1,85 @@
+body{
+
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.nav-container{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+}
+
+.logo-header{
+    width: 113px;
+    height: 127px;
+}
+
+.accueil-deck{
+    display: flex;
+    flex-direction: column-reverse;
+    padding-left: 45em;
+    
+}
+
+.deck-title{
+	text-align: center;
+    font-size: xxx-large;
+	padding-top: 1em;
+}
+
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux cartes de passer à la ligne suivante si nécessaire */
+    gap: 20px; /* Espacement entre les cartes */
+    justify-content: center; /* Centre les cartes dans le conteneur */
+    padding: 20px; /* Padding autour du conteneur */
+    position: relative; /* Nécessaire pour le positionnement des éléments enfants */
+}
+
+.card {
+    position: relative;
+    display: inline-block;
+    border: 2px solid transparent; /* Bordure transparente par défaut */
+    overflow: hidden; /* Assure que l'image agrandie est visible */
+    width: 250px; /* Largeur des cartes */
+    height: 350px; /* Hauteur des cartes */
+    margin: 10px; /* Espacement autour de chaque carte */
+}
+
+.card img {
+    display: block;
+    width: 100%; /* Assure que l'image prend toute la largeur de la carte */
+    height: 100%; /* Assure que l'image prend toute la hauteur de la carte */
+    object-fit: cover; /* Assure que l'image couvre entièrement la carte sans déformation */
+    transition: transform 0.2s ease-in-out; /* Transition douce pour le zoom */
+    transform-origin: center; /* Par défaut, le zoom se fait autour du centre de l'image */
+	 z-index: 1;
+}
+
+/* Zoomer sur l'image lorsque la souris est sur la carte */
+.card:hover img {
+    transform: scale(1.5); /* Agrandir l'image de 50% */
+    transform-origin: bottom center; /* Zoomer autour du coin supérieur gauche */
+}
+
+.btn-delete{
+	position: absolute;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Animation douce pour le bouton */
+    z-index: 2;
+
+}
+
+/* Afficher le bouton au survol de la carte */
+.card:hover .btn-add {
+    opacity: 1;
+}

@@ -1,17 +1,16 @@
-{      
-"name": "deck-constructor",
-"version": "1.0.0",
-"description": "A project for building a deck constructor application.",
-"main": "index.js",
-"scripts": {
-  "start": "node index.js",
-   "dev": "node --watch index.js",
-},
-"dependencies": {
-  "dotenv": "^16.4.5",
-  "express": "^4.21.0",
-  "sequelize": "^6.37.3"
-},
-"author": "",
-"license": "ISC"
+{
+  "name": "deck-constructor",
+  "version": "1.0.0",
+  "description": "A project for building a deck constructor application.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "boostrap": "^2.0.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "sequelize": "^6.37.3"
+  }
 }
